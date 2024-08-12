@@ -1,6 +1,4 @@
-*{
-  text-transform: capitalize;
-}
+
 
 .login {
     min-height: 100vh;
@@ -31,6 +29,7 @@
   }
   .homeTitle{
     text-align: center;
+    text-transform: capitalize
   }
   .btn-login {
     font-size: 0.9rem;
