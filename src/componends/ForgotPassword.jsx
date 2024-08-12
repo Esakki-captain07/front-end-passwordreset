@@ -27,7 +27,7 @@ function ForgotPassword() {
         toast.success(res.data.message);
         navigate('/resetPassword');
       } else {
-        toast.error('Unexpected response status');
+        toast.error(error.response?.data?.message );
       }
     } catch (error) {
       toast.error(error.response?.data?.message || 'An error occurred');

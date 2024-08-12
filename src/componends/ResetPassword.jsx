@@ -19,8 +19,7 @@ function ResetPassword() {
             toast.success(res.data.message);
             navigate('/')
           } else {
-              toast.error('Unexpected response status');
-              console.log(alert('Unexpected response status'))
+              toast.error(error.response?.data?.message );
     
           }
       } catch (error) {
@@ -42,11 +41,11 @@ function ResetPassword() {
               <form>
               <div className="form-floating mb-3">
                   <input type="text" className="form-control" id="floatingInput" placeholder="Enter OTP" onChange={(e)=>setOtp(e.target.value)}/>
-                  <label for="floatingotp">Enter Your OTP</label>
+                  <label htmlFor="floatingotp">Enter Your OTP</label>
                 </div>
                 <div className="form-floating mb-3">
                   <input type="text" className="form-control" id="floatingInput" placeholder="Enter OTP" onChange={(e)=>setNewPassword(e.target.value)}/>
-                  <label for="floatingnewPasword">Enter Your New Password</label>
+                  <label htmlFor="floatingnewPasword">Enter Your New Password</label>
                 </div>
                 <div className="d-grid">
                   <button className="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2"onClick={handleSubmit}>submit</button>
